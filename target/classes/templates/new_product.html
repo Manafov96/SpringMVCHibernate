@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<title>Create New Product</title>
+</head>
+<body>
+<nav role="navigation" class="navbar navbar-default">
+	<div class="">
+		<a href="http://localhost:8080" class="navbar-brand">Spring MVC Example</a>
+	</div>
+	<div class="navbar-collapse">
+		<ul class="nav navbar-nav">
+		<li class="active"><a href="/login">Home</a></li>
+			<li><a href="/">My Products</a></li>
+		</ul>	
+	</div>
+</nav>
+	<div class="container">
+		<h1>Create New Product</h1>
+		<br />
+		<form action="#" th:action="@{/save}" th:object="${product}"
+			method="post">
+				
+					Product Name:<br>	
+					<input type="text" th:field="*{name}" /><br>	
+					Brand:<br>	
+					<input type="text" th:field="*{brand}" /><br>	
+                    Made In:<br>	
+					<input type="text" th:field="*{madein}" /><br>					
+					Price:<br>
+					<input type="text" th:field="*{price}" /><br>
+					Availability:<br>
+					<input type="text" th:field="*{availability}" /><br><br>		
+												
+					<button type="submit" class="btn btn-success" >Save</button> 				
+
+		</form>
+	</div>
+</body>
+</html>
