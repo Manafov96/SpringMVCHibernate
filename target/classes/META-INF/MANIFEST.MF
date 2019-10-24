@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Implementation-Title: ProductManager
 Implementation-Version: 0.0.1-SNAPSHOT
-Built-By: Viko
+Built-By: evel_
 Implementation-Vendor-Id: com.spirngBootMvcHibernate
-Build-Jdk: 1.8.0_201
+Build-Jdk: 1.8.0_202
 Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
  ot-starter-parent/ProductManager
 Created-By: Maven Integration for Eclipse
