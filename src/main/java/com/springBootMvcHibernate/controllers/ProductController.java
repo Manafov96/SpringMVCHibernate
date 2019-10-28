@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.ui.ModelMap;
+//import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,15 +20,15 @@ public class ProductController {
 
 	@Autowired
 	private ProductService service; 
-	
+/*	
 	@RequestMapping(value = "/login", method=RequestMethod.GET)
 	public String showLoginPage(ModelMap model) {
 		model.put("name", "user");
 		model.put("name", "Viko");
 		return "index";
 	}
-	
-	@RequestMapping("/")
+*/	
+	@RequestMapping("/index")
 	public String viewHomePage(Model model) {
 		List<Product> listProducts = service.listAll();
 		model.addAttribute("listProducts", listProducts);
@@ -48,7 +48,7 @@ public class ProductController {
 	public String saveProduct(@ModelAttribute("product") Product product) {
 		service.save(product);
 		
-		return "redirect:/";
+		return "redirect:/index";
 	}
 	
 	@RequestMapping("/edit/{id}")
@@ -63,6 +63,6 @@ public class ProductController {
 	@RequestMapping("/delete/{id}")
 	public String deleteProduct(@PathVariable(name = "id") int id) {
 		service.delete(id);
-		return "redirect:/";		
+		return "redirect:/index";		
 	}
 }
