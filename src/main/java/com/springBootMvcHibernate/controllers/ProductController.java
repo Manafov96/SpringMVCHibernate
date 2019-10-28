@@ -24,7 +24,6 @@ public class ProductController {
 	@RequestMapping(value = "/login", method=RequestMethod.GET)
 	public String showLoginPage(ModelMap model) {
 		model.put("name", "user");
-		model.put("name", "Viko");
 		return "index";
 	}
 */	
